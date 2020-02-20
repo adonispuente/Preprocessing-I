@@ -133,6 +133,17 @@ table {
 * {
   box-sizing: border-box;
 }
+//mixins
+@main-color: #05386b;
+.centered() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.align() {
+  align-items: center;
+}
 
 html,
 body {
@@ -171,7 +182,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #05386b;
+    background-color: @main-color;
     color: white;
   }
   h1,
@@ -186,31 +197,48 @@ body {
     .bodydiv {
       display: flex;
       flex-direction: column;
+      .align();
+      text-align: center;
+      p {
+        padding: 0;
+        padding-right: 0;
+      }
+    }
+
+    .background {
+      height: 126vh;
+      width: 100%;
+      text-align: center;
     }
   }
+
   .bodydiv {
     display: flex;
     height: 90vh;
     line-height: 1.6;
-    font-size: 2rem;
+    font-size: 1.7rem;
 
     .background {
       background-color: #659dbd;
       color: white;
       width: 66%;
-      height: 106vh;
-      padding-top: 3%;
+      height: 117vh;
+      padding: 3%;
+
+      div {
+        .centered();
+      }
 
       h2,
       h3 {
-        font-size: 1.4rem;
+        font-size: 1.9rem;
         padding: 0 4%;
       }
 
       p,
       li {
-        padding: 1% 4%;
-        padding-right: 35%;
+        // padding: 1% 4%;
+        // padding-right: 35%;
         font-size: 1.5rem;
         list-style-type: circle;
       }

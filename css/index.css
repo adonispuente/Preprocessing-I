@@ -176,30 +176,45 @@ header h2 {
   body .bodydiv {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  body .bodydiv p {
+    padding: 0;
+    padding-right: 0;
+  }
+  body .background {
+    height: 126vh;
+    width: 100%;
+    text-align: center;
   }
 }
 body .bodydiv {
   display: flex;
   height: 90vh;
   line-height: 1.6;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 body .bodydiv .background {
   background-color: #659dbd;
   color: white;
   width: 66%;
-  height: 106vh;
-  padding-top: 3%;
+  height: 117vh;
+  padding: 3%;
+}
+body .bodydiv .background div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 body .bodydiv .background h2,
 body .bodydiv .background h3 {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   padding: 0 4%;
 }
 body .bodydiv .background p,
 body .bodydiv .background li {
-  padding: 1% 4%;
-  padding-right: 35%;
   font-size: 1.5rem;
   list-style-type: circle;
 }
