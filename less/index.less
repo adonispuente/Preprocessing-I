@@ -170,20 +170,35 @@ nav {
 header {
   display: flex;
   height: 40%;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+
+    .headshot {
+      width: 100%;
+    }
+  }
 
   .alaska {
     height: 40vh;
-    width: 100%;
+    @media (max-width: 500px) {
+      height: 73vh;
+    }
   }
   .Title {
     font-size: 3rem;
     width: 75%;
+    height: 40vh;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: @main-color;
     color: white;
+    @media (max-width: 500px) {
+      width: 100%;
+      align-items: center;
+    }
   }
   h1,
   h2 {
@@ -221,9 +236,12 @@ body {
     .background {
       background-color: #659dbd;
       color: white;
-      width: 66%;
+      width: 25%;
       height: 117vh;
       padding: 3%;
+      @media (max-width: 500px) {
+        width: 100%;
+      }
 
       div {
         .centered();
@@ -244,7 +262,7 @@ body {
       }
     } //backgrounddiv ends here
     .Career {
-      width: 85%;
+      width: 75%;
       padding-left: 1%;
 
       h2,
@@ -279,4 +297,10 @@ body {
 
   //   }
   // }
+}
+.everything {
+  width: 100%;
+}
+.headshot {
+  width: 25%;
 }
